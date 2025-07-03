@@ -1,0 +1,422 @@
+/*NOTE 
+Keseluruhan website ini mendukung responsive hingga width 500px namun untuk zoom hanya 
+bisa 90 - 110 jika lebih dari itu tampilan website tidak optimal*/
+
+/*Ini Merupakan Bagian Dari Navbar*/
+* {
+    text-decoration: none !important;
+}
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+.navbar-brand, .navbar-nav {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  padding-top: 4px; padding-bottom: 4px;
+  border: none;
+  padding-right: 10px; padding-left: 10px;
+  margin: 5px;
+}
+.navbar-nav {
+    flex-direction: row;
+}
+:root,
+[data-bs-theme=light] {
+    --warna-dominan : #F5F5F5; --warna-sekunder-merah : #F05454;
+    --warna-sekunder-biru : #30475E; --warna-text : #121212; 
+    --warna-sekunder-abu : #444f5b;
+}
+.floating-navbar {
+    position: absolute; z-index: 1000; 
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 0 !important;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    padding: 0;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+    border-radius: 8px;
+}
+.sticky-top {
+    top: 20px !important;
+}
+.navbar-toggler {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px; 
+}
+.navbar-toggler-icon {
+    background-color: var(--warna-dominan) !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 23px !important;
+    border-radius: 5px;
+}
+.nav-item {
+    width: 100%;
+    border-radius: 7px; margin-left: 10px;
+    padding-left: 7px; padding-right: 7px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+    background: var(--warna-dominan);
+    display: flex; color: var(--warna-text);
+    justify-content: center; margin: 4px;
+    font-family: 'Poppins', sans-serif; font-weight: 500;
+}
+.navbar-brand {
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+    border-radius: 8px;
+}
+/* Animasi transisi warna teks saat hover pada navbar-brand dan nav-link */
+.navbar-brand, 
+.nav-link, 
+.nav-item {
+    transition: 
+    color 0.3s cubic-bezier(.4,2,.6,1),
+    font-size 0.3s cubic-bezier(.4,2,.6,1);
+}
+.navbar-brand:hover,
+.nav-link:hover,
+.nav-item:hover {
+    transition: 0.3s cubic-bezier(.4,2,.6,1);
+    font-size: 25px;
+    color: var(--warna-sekunder-abu) !important;
+}
+/* Ini merupakan bagian landing page*/
+.container-1 {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.landing {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 5.5%; margin-left: 5.5%;
+}
+.card {
+    height: auto;
+    padding: 22px !important;
+    padding-left: 33px !important;
+    padding-right: 33px !important;
+    position: relative;
+    box-sizing: border-box;
+    bottom: 50%;
+    color: var(--warna-dominan) !important;
+    backdrop-filter: blur(5px);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5) !important;
+    border-radius: 22px !important;
+    margin-right: 4%;
+}
+.judul-card {
+    font-weight: 600;
+    font-size: 45px;
+    text-shadow: 0px 0px 7px rgba(0,0,0,0.74) !important;
+}
+.isi-card {
+    text-align: justify;
+    font-weight: 400;
+    font-size: 19px;
+    text-shadow: 0px 0px 7px rgba(0,0,0,0.74) !important;
+} 
+.button {
+    border: none;
+    margin-bottom: 18%;
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(245, 245, 245, 0.3) !important;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5) !important;
+    transition: 0.3s cubic-bezier(.4,2,.6,1);
+}
+.imagebutton {
+    width: 75px;
+    height: 75px;
+    transition: 0.3s cubic-bezier(.4,2,.6,1);
+}
+.button:hover {
+    width: 105px;
+    height: 105px;
+    transition: 0.3s cubic-bezier(.4,2,.6,1);
+}
+.imagebutton:hover {
+    width: 80px;
+    height: 80px;
+    transition: 0.3s cubic-bezier(.4,2,.6,1);
+}
+/*Bagian Character Wajib Di Cropping!*/
+/*Ini juga berisi gambar gambar pada bagian body*/
+.img-char {
+    margin-top: 10%;
+    max-width: 380px;
+    height: 100%;
+}
+.image-1 {
+    width: 100%;
+    height: 128vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(img/landing-page.png);
+    image-rendering: optimizeSpeed;
+    mask-image: url(img/landing-page.png);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #F5F5F5 10%);
+}
+.waveform {
+    background-image: url(img/waveform.svg);
+    height: 30%;
+    width: 100%;
+}
+/*Ini merupakan bagian isi dari website itu sendiri*/
+.container-2 {
+    display: block; 
+    margin-right: 6.5%;
+    margin-left: 6.5%;
+}
+.content-creation-card {
+    background-color: var(--warna-sekunder-biru) !important;
+    padding: 1.5vh; border-radius: 15px;
+}
+.nama-content {
+    margin-right: auto; margin-left: 5vh; margin-top: auto; margin-bottom: auto;
+    color: var(--warna-sekunder-merah);
+}
+.nama-content-h1 {
+    font-weight: 600;
+    font-size: 66px;
+}
+.nama-content-h2 {
+    font-weight: 500;
+    font-size: 32px;
+}
+.masuk-youtube {
+    background-color: var(--warna-sekunder-merah);
+    padding-right: 25px; padding-left: 25px;
+    border-radius: 7.5px;
+}
+.image-play {
+    margin-top: 23px;
+}
+.image-profile-creator {
+    width: 18vh; height: 18vh;
+    border-radius: 7.5px;
+}
+.content-creation-penjelasan {
+    font-weight: 500;
+    font-size: 22px;
+    margin-top: 3vh;
+    text-align: justify;
+}
+.card-aib {
+    padding: 6.5vh;
+    background-color: var(--warna-sekunder-biru);
+    border-radius: 13px;
+    margin-right: 4%; margin-left: 4%; margin-top: 4%;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4); 
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4) !important;
+}
+.card-aib-h1 {
+    font-size: 50px;
+    color: var(--warna-dominan);
+    font-weight: 600;
+}
+.card-aib-p {
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--warna-dominan);
+}
+.card-aib-p {
+    color: var(--warna-dominan);
+}
+.more-about {
+    background-color: transparent;
+    border: 3px solid #6989aa;
+    padding-right: 1.5%; padding-left: 1.5%;
+    border-radius: 10px;
+    transition: 0.3s cubic-bezier(.4,2,.6,1);
+}
+.card-aib-a {
+    color: var(--warna-dominan);
+    transition: 0.3s cubic-bezier(.4,2,.6,1);
+}
+.more-about:hover, .card-aib-a:hover {
+    background-color: var(--warna-dominan);
+    border: none; font-size: 17px;
+    color: var(--warna-sekunder-biru);
+    transition: 0.3s cubic-bezier(.4,2,.6,1);
+}
+.aia, .aib, .aic {
+    background-color: #44617F;
+    margin-right: 10px; margin-left:10px ;
+    padding: 20px;
+    color: var(--warna-dominan);
+    border-radius: 15px;
+    margin-top: 15px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4); 
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4) !important;
+}
+.ai-img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+/*ini bagian mobile karena kalau di sempitin banyak bugnya*/
+@media (max-width: 1100px) {
+    .landing {
+        flex-direction: column-reverse;
+    }
+    .button {
+        margin-bottom: 0%;
+        margin-top: 12%;
+    }
+    .img-char {
+        margin-top: 5%;
+    }
+    .image-1 {
+        height: 188vh;
+        mask-image: url(img/landing-page.png);
+        -webkit-mask-image: linear-gradient(to bottom, transparent, #598BCD 7%);
+    }
+    .masuk-youtube {
+        display: none;
+    }
+    .nama-content-h1 {
+        font-size: 50px;
+    }
+    .nama-content-h2 {
+        font-size: 25px;
+    }
+    .image-profile-creator {
+        width: 110px;
+        height: 110px;
+    }
+    .card-aib-content {
+        justify-content: none !important;
+        flex-direction: column;
+    }
+}
+@media (max-width: 750px) {
+    .image-1 {
+        height: 190vh;
+        mask-image: url(img/landing-page.png);
+        -webkit-mask-image: linear-gradient(to bottom, transparent, #598BCD 5%);
+    }
+    .waveform {
+        display: none;
+    }
+    .container-2 {
+        margin-top: 5vh;
+    }
+    .image-profile-creator {
+        width: 200px;
+        height: 200px;
+        background-color: rgba(245, 245, 245, 0.3) !important;
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5); 
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5) !important;
+        border-radius: 20px;
+    }
+    .nama-content {
+        display: block;
+        color: var(--warna-sekunder-biru);
+    }
+    .content-creation-card {
+        background-color: transparent !important;
+    }
+    .nama-content-h1 {
+        font-size: 30px;
+    }
+    .nama-content-h2 {
+        font-size: 15px;
+    }
+}
+@media (max-width: 500px ) {
+    .image-1 {
+        height: 220vh;
+    }
+    .imagebutton {
+        width: 55px;
+        height: 55px;
+    }
+    .button {
+        width: 70px;
+        height: 70px;
+        border-radius: 10px;
+        margin-top: 15%;
+    }
+    .button:hover {
+        width: 75px;
+        height: 75px;
+        border-radius: 10px;
+    }
+    .imagebutton:hover {
+        width: 60px;
+        height: 60px;
+    }
+    .waveform {
+        display: none;
+    }
+    .image-profile-creator {
+        width: 100px; height: 100px;
+        border-radius: 15px;
+    }
+    .content-creation-penjelasan {
+        font-size: 17px;
+    }
+}
+@media (max-width: 430px ) {
+    .image-1 {
+        height: 240vh;
+    }
+    .waveform {
+        display: none;
+    }
+}
+@media (display-mode: fullscreen) {
+    .image-1 {
+        height: 112vh;
+    }
+}
+@media (min-width: 1900px) {
+    .waveform {
+        display: none;
+    }
+    .container-2 {
+        margin-top: 5vh;
+    }
+}
+@media (min-height: 730px) {
+    .waveform {
+        display: none;
+    }
+    .container-2 {
+        margin-top: 5vh;
+    }
+    .image-1 {
+        height: auto;
+    }
+    .card {
+        margin-bottom: 5vh;
+    }
+}
+@media (max-height: 700px) and (max-width: 1500px) {
+    .waveform {
+        display: none;
+    }
+    .container-2 {
+        margin-top: 5vh;
+    }
+}
